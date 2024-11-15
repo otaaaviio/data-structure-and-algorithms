@@ -1,3 +1,6 @@
+from collections import deque
+
+
 class TreeNode:
     def __init__(self, value):
         self.value = value
@@ -19,7 +22,7 @@ class TreeNode:
     def search(self, val):
         if self.value == val:
             return True
-        
+
         if val < self.value and self.left:
             return self.left.search(val)
 
@@ -36,7 +39,7 @@ class TreeNode:
 
         if self.left:
             self.left.preorder_traversal(res)
-            
+
         if self.right:
             self.right.preorder_traversal(res)
 
@@ -69,22 +72,41 @@ class TreeNode:
         res.append(self.value)
 
         return res
-    
-    
+
     def dfs(self, val):
-        if self.value: 
+        if self.value:
             print(self.value)
         if self.value == val:
             return self
-        
+
         if self.left:
             left_found = self.left.dfs(val)
             if left_found:
-                return left_found 
-            
+                return left_found
+
         if self.right:
             return self.right.dfs(val)
-        
+
+        return None
+
+    def bfs(self, val):
+        if self.value is None:
+            return None
+
+        dq = deque()
+        dq.append(self)
+
+        while dq:
+            node = dq.popleft()
+            if node.value == val:
+                return node
+
+            if node.left:
+                dq.append(node.left)
+
+            if node.right:
+                dq.append(node.right)
+
         return None
 
 
@@ -102,5 +124,6 @@ class TreeNode:
 # print("inorder traversal: ", root.inorder_traversal())
 # print("postorder traversal: ", root.postorder_traversal())
 # print("dfs(10): ", root.dfs(10))
+# print("bfs(10): ", root.bfs(10))
 
 # tests
