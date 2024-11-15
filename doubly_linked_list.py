@@ -16,7 +16,7 @@ class DoublyLinkedList:
         while current:
             result.append(str(current.value))
             current = current.next
-        return ' -> '.join(result)
+        return " -> ".join(result)
 
     def insertAtBegin(self, value):
         new_node = Node(value)
@@ -37,11 +37,11 @@ class DoublyLinkedList:
             new_node.prev = self.tail
             self.tail.next = new_node
             self.tail = new_node
-        
+
     def removeFirstNode(self):
         if self.head is None:
             return None
-        
+
         removed_value = self.head.value
         if self.head == self.tail:
             self.head = None
@@ -49,13 +49,13 @@ class DoublyLinkedList:
         else:
             self.head = self.head.next
             self.head.prev = None
-            
+
         return removed_value
-    
+
     def removeLastNode(self):
         if self.tail is None:
             return None
-        
+
         removed_value = self.tail.value
         if self.head == self.tail:
             self.head = None
@@ -63,9 +63,9 @@ class DoublyLinkedList:
         else:
             self.tail = self.tail.prev
             self.tail.next = None
-        
+
         return removed_value
-        
+
 
 # tests
 

@@ -1,19 +1,20 @@
 def binary_search(arr, t):
     l, r = 0, len(arr)
     steps = 0
-    
+
     while l < r:
         steps += 1
-        mid = int((l+r)/2)
+        mid = int((l + r) / 2)
 
         if arr[mid] == t:
-            print('steps: ', steps)
+            print("steps: ", steps)
             return mid
         elif arr[mid] < t:
             l = mid + 1
         else:
             r = mid
     return -1
+
 
 # tests
 

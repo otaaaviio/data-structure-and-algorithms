@@ -1,19 +1,21 @@
 from linked_list import *
 
+
 def find_middle(head):
     slow = head
     fast = head.next
-    
+
     while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
 
-    return slow    
-    
+    return slow
+
+
 def merge(l1, l2):
     dummy = Node()
     tail = dummy
-    
+
     while l1 and l2:
         if l1.value < l2.value:
             tail.next = l1
@@ -26,20 +28,21 @@ def merge(l1, l2):
     tail.next = l1 or l2
     return dummy.next
 
+
 def merge_sort(head):
     if not head or not head.next:
         return head
-    
+
     mid = find_middle(head)
-    
+
     after_mid = mid.next
     mid.next = None
-    
+
     left = merge_sort(head)
     right = merge_sort(after_mid)
-    
+
     sorted_list = merge(left, right)
-    
+
     return sorted_list
 
 

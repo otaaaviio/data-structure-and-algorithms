@@ -2,11 +2,12 @@ class TrieNode:
     def __init__(self):
         self.children = {}
         self.is_end_of_a_word = False
-        
+
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, word):
         current = self.root
         for char in word:
@@ -14,7 +15,7 @@ class Trie:
                 current.children[char] = TrieNode()
             current = current.children[char]
         current.is_end_of_a_word = True
-        
+
     def has_prefix(self, word):
         current = self.root
         for char in word:
@@ -22,7 +23,7 @@ class Trie:
                 return False
             current = current.children[char]
         return True
-    
+
     def get_words_starts_with(self, prefix):
         def dfs(node, prefix, result):
             if node.is_end_of_a_word:
@@ -39,15 +40,16 @@ class Trie:
                 return result
         dfs(current, prefix, result)
         return result
-        
+
     def search(self, word):
         current = self.root
-        
+
         for char in word:
             if char not in current.children:
                 return False
             current = current.children[char]
         return current.is_end_of_a_word
+
 
 # tests
 

@@ -1,11 +1,11 @@
 def quick_sort(arr, left, right):
     if left < right:
-        print(arr[left:right-1])
+        print(arr[left : right - 1])
         pi = partition(arr, left, right)
-        quick_sort(arr, left, pi-1)
-        quick_sort(arr, pi+1, right)
-        
-        
+        quick_sort(arr, left, pi - 1)
+        quick_sort(arr, pi + 1, right)
+
+
 def median_of_three(arr, left, right):
     mid = (left + right) // 2
     if arr[left] > arr[mid]:
@@ -26,10 +26,11 @@ def partition(arr, left, right):
         if arr[j] <= pivot:
             i += 1
             arr[j], arr[i] = arr[i], arr[j]
-        
-    arr[i+1], arr[right] = arr[right], arr[i+1]
-        
-    return i+1
+
+    arr[i + 1], arr[right] = arr[right], arr[i + 1]
+
+    return i + 1
+
 
 # tests
 
