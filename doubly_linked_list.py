@@ -1,5 +1,5 @@
 class Node:
-    def __init__(self, value):
+    def __init__(self, value=None):
         self.value = value
         self.next = None
         self.prev = None
@@ -67,46 +67,46 @@ class DoublyLinkedList:
         return removed_value
         
 
-# Testes
+# # Testes
 
-# Criação de uma lista vazia
-dll = DoublyLinkedList()
-print("Lista inicial (vazia):", dll)  # Esperado: ""
+# # Criação de uma lista vazia
+# dll = DoublyLinkedList()
+# print("Lista inicial (vazia):", dll)  # Esperado: ""
 
-# Teste de inserção no início
-dll.insertAtBegin(10)
-print("Após inserir 10 no início:", dll)  # Esperado: "10"
+# # Teste de inserção no início
+# dll.insertAtBegin(10)
+# print("Após inserir 10 no início:", dll)  # Esperado: "10"
 
-dll.insertAtBegin(20)
-print("Após inserir 20 no início:", dll)  # Esperado: "20 -> 10"
+# dll.insertAtBegin(20)
+# print("Após inserir 20 no início:", dll)  # Esperado: "20 -> 10"
 
-dll.insertAtBegin(30)
-print("Após inserir 30 no início:", dll)  # Esperado: "30 -> 20 -> 10"
+# dll.insertAtBegin(30)
+# print("Após inserir 30 no início:", dll)  # Esperado: "30 -> 20 -> 10"
 
-# Teste de inserção no final
-dll.insertAtEnd(40)
-print("Após inserir 40 no final:", dll)  # Esperado: "30 -> 20 -> 10 -> 40"
+# # Teste de inserção no final
+# dll.insertAtEnd(40)
+# print("Após inserir 40 no final:", dll)  # Esperado: "30 -> 20 -> 10 -> 40"
 
-dll.insertAtEnd(50)
-print("Após inserir 50 no final:", dll)  # Esperado: "30 -> 20 -> 10 -> 40 -> 50"
+# dll.insertAtEnd(50)
+# print("Após inserir 50 no final:", dll)  # Esperado: "30 -> 20 -> 10 -> 40 -> 50"
 
-# Teste de remoção do primeiro nó
-removed = dll.removeFirstNode()
-print(f"Ao remover o primeiro nó ({removed}):", dll)  # Esperado: "20 -> 10 -> 40 -> 50"
+# # Teste de remoção do primeiro nó
+# removed = dll.removeFirstNode()
+# print(f"Ao remover o primeiro nó ({removed}):", dll)  # Esperado: "20 -> 10 -> 40 -> 50"
 
-# Teste de remoção do último nó
-removed = dll.removeLastNode()
-print(f"Ao remover o último nó ({removed}):", dll)  # Esperado: "20 -> 10 -> 40"
+# # Teste de remoção do último nó
+# removed = dll.removeLastNode()
+# print(f"Ao remover o último nó ({removed}):", dll)  # Esperado: "20 -> 10 -> 40"
 
-# Teste de remoção até esvaziar a lista
-dll.removeFirstNode()
-dll.removeFirstNode()
-dll.removeFirstNode()
-print("Após remover todos os nós:", dll)  # Esperado: ""
+# # Teste de remoção até esvaziar a lista
+# dll.removeFirstNode()
+# dll.removeFirstNode()
+# dll.removeFirstNode()
+# print("Após remover todos os nós:", dll)  # Esperado: ""
 
-# Teste de remoção de uma lista vazia
-removed = dll.removeFirstNode()
-print("Remover de lista vazia (primeiro nó):", removed)  # Esperado: None
+# # Teste de remoção de uma lista vazia
+# removed = dll.removeFirstNode()
+# print("Remover de lista vazia (primeiro nó):", removed)  # Esperado: None
 
-removed = dll.removeLastNode()
-print("Remover de lista vazia (último nó):", removed)  # Esperado: None
+# removed = dll.removeLastNode()
+# print("Remover de lista vazia (último nó):", removed)  # Esperado: None
