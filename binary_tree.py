@@ -25,6 +25,17 @@ class TreeNode:
                     self.right.insert(val)
         else:
             self.value = val
+            
+    def search(self, val):
+        if self.value == val:
+            return True
+        
+        if val < self.value and self.left:
+            self.left.search(val)
+        elif val > self.value and self.right:
+            self.right.search(val)
+        
+        return False
   
 # tests          
 
@@ -35,5 +46,7 @@ class TreeNode:
 # tree.insert(5)
 # tree.insert(4)
 # tree.PrintTree()
+# print(tree.search(1))
+# print(tree.search(10))
 
 # tests          
