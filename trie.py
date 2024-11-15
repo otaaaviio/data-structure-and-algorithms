@@ -49,13 +49,17 @@ class Trie:
             current = current.children[char]
         return current.is_end_of_a_word
 
-trie = Trie()
-trie.insert('app')
-trie.insert('apple')
-trie.insert('apricot')
-print(trie.has_prefix('ap'))
-print(trie.search('app'))
-print(trie.search('apple'))
-print(trie.search('ap'))
-print(trie.get_words_starts_with('ap'))
-print(trie.get_words_starts_with('app'))
+# tests
+
+# trie = Trie()
+# trie.insert('app')
+# trie.insert('apple')
+# trie.insert('apricot')
+# print(trie.has_prefix('ap'))
+# print(trie.search('app'))
+# print(trie.search('apple'))
+# print(trie.search('ap'))
+# print(trie.get_words_starts_with('ap'))
+# print(trie.get_words_starts_with('app'))
+
+# tests

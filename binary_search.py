@@ -14,11 +14,14 @@ def binary_search(arr, t):
         else:
             r = mid
     return -1
-        
-arr_a = [1, 2, 3, 4, 5]
-arr_b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-arr_c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
-binary_search(arr_a, 3)
-binary_search(arr_b, 3)
-binary_search(arr_c, 3)
+# tests
+
+# arr_a = [1, 2, 3, 4, 5]
+# arr_b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# arr_c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+# binary_search(arr_a, 3)
+# binary_search(arr_b, 3)
+# binary_search(arr_c, 3)
+
+# tests

@@ -15,9 +15,12 @@ def bubble_sort(nums):
             
     return nums
 
-arr1 = [1, 3, 2, 4, 5]
-bubble_sort(arr1)  # [1, 3, 2, 4, 5]
+# tests
 
-print('')
-arr2 = [5, 4, 3, 2, 1]
-bubble_sort(arr2)  # [5, 4, 3, 2, 1]
+# arr1 = [1, 3, 2, 4, 5]
+# bubble_sort(arr1)  # [1, 3, 2, 4, 5]
+# print('')
+# arr2 = [5, 4, 3, 2, 1]
+# bubble_sort(arr2)  # [5, 4, 3, 2, 1]
+
+# tests

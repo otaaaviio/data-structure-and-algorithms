@@ -32,11 +32,15 @@ class Queue:
         
         self.head = self.head.next
 
-queue = Queue()
-queue.put(1)
-queue.put(2)
-queue.put(3)
-queue.put(4)
-queue.pop()
-queue.pop()
-print(queue)
+# tests
+
+# queue = Queue()
+# queue.put(1)
+# queue.put(2)
+# queue.put(3)
+# queue.put(4)
+# queue.pop()
+# queue.pop()
+# print(queue)
+
+# tests

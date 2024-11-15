@@ -2,6 +2,15 @@ class Node:
     def __init__(self, value=None):
         self.value = value
         self.next = None
+        
+    def __str__(self):
+        values = []
+        
+        while self:
+            values.append(str(self.value))
+            self = self.next
+        string = ' -> '.join(values)
+        return string
 
 
 class LinkedList:
@@ -15,6 +24,10 @@ class LinkedList:
             result.append(str(current.value))
             current = current.next
         return ' -> '.join(result)
+    
+    def insertAtBeginArray(self, values):
+        for value in values:
+            self.insertAtBegin(value)
 
     def insertAtBegin(self, value):
         new_node = Node(value)
@@ -108,23 +121,25 @@ class LinkedList:
         
 
 # tests
-linked_list = LinkedList()
-linked_list.insertAtBegin(1)
-linked_list.insertAtEnd(3)
-linked_list.insertAtIndex(2, 1)
 
-print('expect: 1 -> 2 -> 3')
-print(linked_list)
+# linked_list = LinkedList()
+# linked_list.insertAtBegin(1)
+# linked_list.insertAtEnd(3)
+# linked_list.insertAtIndex(2, 1)
 
-linked_list.updateNode(4, 1)
+# print('expect: 1 -> 2 -> 3')
+# print(linked_list)
 
-print('expect: 1 -> 4 -> 3')
-print(linked_list)
+# linked_list.updateNode(4, 1)
 
-linked_list.removeFirstNode()
-linked_list.removeLastNode()
-linked_list.removeAtIndex(0)
+# print('expect: 1 -> 4 -> 3')
+# print(linked_list)
 
-print('expect: 4')
-print(linked_list)
+# linked_list.removeFirstNode()
+# linked_list.removeLastNode()
+# linked_list.removeAtIndex(0)
+
+# print('expect: 4')
+# print(linked_list)
+
 # tests

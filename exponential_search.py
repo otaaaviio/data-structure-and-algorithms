@@ -28,8 +28,10 @@ def exponential_search(arr, t):
     else:
         return binary_search(arr, t, n//2, n) 
 
-        
-arr_a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+# tests
 
-print(exponential_search(arr_a, 9))
-print(exponential_search(arr_a, 11))
+# arr_a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+# print(exponential_search(arr_a, 9))
+# print(exponential_search(arr_a, 11))
+
+# tests

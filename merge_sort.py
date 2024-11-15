@@ -43,12 +43,15 @@ def merge_sort(head):
     return sorted_list
 
 
-new_list = LinkedList()
-new_list.insertAtBegin(1)
-new_list.insertAtBegin(2)
-new_list.insertAtBegin(3)
-new_list.insertAtBegin(4)
-new_list.insertAtBegin(5)
-new_list.insertAtBegin(6)
+# tests
 
-sorted_list = merge_sort(new_list.head)
+# new_list = LinkedList()
+# new_list.insertAtBeginArray([1, 2, 3, 4, 5, 6])
+
+# print(new_list) # before: 6 -> 5 -> 4 -> 3 -> 2 -> 1
+
+# sorted_list = merge_sort(new_list.head)
+
+# print(sorted_list) # after: 1 -> 2 -> 3 -> 4 -> 5 -> 6
+
+# tests

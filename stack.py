@@ -34,10 +34,15 @@ class Stack:
             return
         
         self.tail =self.tail.previus
-            
-stack = Stack()
-stack.append(1)
-stack.append(2)
-stack.append(3)
-stack.pop()
-print(stack)
+  
+  
+# tests
+          
+# stack = Stack()
+# stack.append(1)
+# stack.append(2)
+# stack.append(3)
+# stack.pop()
+# print(stack)
+
+# tests

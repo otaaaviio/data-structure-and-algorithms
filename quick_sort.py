@@ -31,7 +31,10 @@ def partition(arr, left, right):
         
     return i+1
 
-arr = [2,4,6,7,1,0,10]
+# tests
 
-quick_sort(arr, 0, len(arr)-1)
-print(arr)
+# arr = [2,4,6,7,1,0,10]
+# quick_sort(arr, 0, len(arr)-1)
+# print(arr)
+
+# tests
