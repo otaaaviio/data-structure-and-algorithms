@@ -39,14 +39,15 @@ class TreeNode:
   
 # tests          
 
-# tree = TreeNode(1)
-# tree.insert(7)
-# tree.insert(3)
-# tree.insert(2)
-# tree.insert(5)
-# tree.insert(4)
-# tree.PrintTree()
-# print(tree.search(1))
-# print(tree.search(10))
+# root = TreeNode(1)
+# root.insert(7)
+# root.insert(3)
+# root.insert(2)
+# root.insert(5)
+# root.insert(4)
+# root.PrintTree()
+# print('')
+# print('has 1 in binary tree: ', root.search(1))
+# print('has 10 in binary tree: ', root.search(10))
 
 # tests          
