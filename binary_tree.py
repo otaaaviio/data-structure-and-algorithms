@@ -69,6 +69,23 @@ class TreeNode:
         res.append(self.value)
 
         return res
+    
+    
+    def dfs(self, val):
+        if self.value: 
+            print(self.value)
+        if self.value == val:
+            return self
+        
+        if self.left:
+            left_found = self.left.dfs(val)
+            if left_found:
+                return left_found 
+            
+        if self.right:
+            return self.right.dfs(val)
+        
+        return None
 
 
 # tests
@@ -84,5 +101,6 @@ class TreeNode:
 # print("preorder traversal: ", root.preorder_traversal())
 # print("inorder traversal: ", root.inorder_traversal())
 # print("postorder traversal: ", root.postorder_traversal())
+# print("dfs(10): ", root.dfs(10))
 
 # tests
