@@ -36,9 +36,9 @@ def merge_sort(head):
     mid.next = None
     
     left = merge_sort(head)
-    rigth = merge_sort(after_mid)
+    right = merge_sort(after_mid)
     
-    sorted_list = merge(left, rigth)
+    sorted_list = merge(left, right)
     
     return sorted_list
 
